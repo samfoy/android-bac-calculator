@@ -1,0 +1,222 @@
+<!--/**-->
+<!--* HW #1-->
+<!--* activity_main.xml-->
+<!--* Samuel Painter, Praveen Surenani-->
+<!--*/-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weight"
+        android:text="@string/weight_tag"
+        android:textColor="@color/abc_primary_text_material_light"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10sp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10sp"
+        android:paddingRight="10sp"
+        android:id="@+id/weight_input"
+        android:inputType="number"
+        android:digits="0123456789."
+        android:singleLine="true"
+        android:hint="@string/weight_hint"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/weight"
+        android:layout_alignTop="@id/weight"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gender"
+        android:layout_toRightOf="@id/weight_input"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp"
+        android:layout_alignBottom="@id/weight_input"
+        android:paddingBottom="10sp"
+        android:text="@string/gender_tag"
+        android:showText="true"
+        android:checked="true"
+        android:textOn="M"
+        android:textOff="F"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weight_input"
+        android:id="@+id/save"
+        android:text="@string/save_tag"
+        android:textSize="20sp"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="40sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/save"
+        android:id="@+id/size"
+        android:paddingTop="5sp"
+        android:text="@string/size_tag"
+        android:textSize="18sp"
+        android:textColor="@color/abc_primary_text_material_light"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/radio_buttons"
+        android:orientation="horizontal"
+        android:layout_alignTop="@+id/size"
+        android:layout_alignLeft="@+id/weight_input"
+        android:layout_alignStart="@+id/weight_input">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:padding="5sp"
+            android:checked="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/oz1"
+            android:text="@string/oz1"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:id="@+id/oz5"
+            android:text="@string/oz5"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:id="@+id/oz12"
+            android:text="@string/oz12"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alcohol"
+        android:text="@string/alcohol_tag"
+        android:paddingBottom="20sp"
+        android:layout_below="@id/size"
+        android:textSize="18sp"
+        android:textColor="@color/abc_primary_text_material_light"
+        android:layout_marginTop="20sp"/>
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/alcohol"
+        android:layout_toLeftOf="@+id/current"
+        android:id="@+id/seek"
+        android:layout_below="@id/size"
+        android:paddingTop="22sp"
+        android:progress="1"
+        android:max="5"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/current"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/size"
+        android:paddingTop="20sp"
+        android:textSize="18sp"
+        android:minWidth="40sp"
+        android:textAlignment="center"
+        android:textColor="@color/abc_primary_text_material_light"/>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_group"
+        android:orientation="horizontal"
+        android:layout_below="@id/alcohol"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add"
+            android:text="@string/add_tag"
+            android:textSize="20sp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reset"
+            android:text="@string/reset_tag"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_group"
+        android:id="@+id/bac_level"
+        android:text="@string/level_tag"
+        android:textSize="32sp"
+        android:textColor="@color/abc_primary_text_material_light"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="50sp"/>
+
+    <ProgressBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_below="@id/bac_level"
+        android:paddingTop="20sp"
+        android:id="@+id/progress"
+        android:progress="0"
+        android:max="25"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/your_status"
+            android:text="@string/status_tag"
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="right"
+            android:padding="10sp"
+            android:textColor="@color/abc_primary_text_material_light"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/status"
+            android:text="@string/safe"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/your_status"
+            android:layout_alignParentBottom="true"
+            android:padding="10sp"
+            android:textColor="@color/abc_primary_text_material_light"
+            android:background="@color/safe" />
+    </RelativeLayout>
+
+</RelativeLayout>

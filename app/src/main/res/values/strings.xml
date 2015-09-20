@@ -1,0 +1,28 @@
+<!--/**-->
+<!--* HW #1-->
+<!--* strings.xml-->
+<!--* Samuel Painter, Praveen Surenani-->
+<!--*/-->
+<resources>
+    <string name="app_name">BAC Calculator</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="weight_tag">Weight (lbs)</string>
+    <string name="weight_hint">Enter weight</string>
+    <string name="gender_tag">Gender</string>
+    <string name="save_tag">Save</string>
+    <string name="size_tag">Drink Size</string>
+    <string name="oz1">1 oz</string>
+    <string name="oz5">5 oz</string>
+    <string name="oz12">12 oz</string>
+    <string name="alcohol_tag">Alcohol %</string>
+    <string name="add_tag">Add Drink</string>
+    <string name="reset_tag">Reset</string>
+    <string name="level_tag">BAC Level: </string>
+    <string name="status_tag">Your Status: </string>
+    <string name="safe">You\'re safe.</string>
+    <string name="careful">Be careful...</string>
+    <string name="danger">Over the limit!</string>
+</resources>

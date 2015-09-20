@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--/**-->
+    <!--* HW #1-->
+    <!--* colors.xml-->
+    <!--* Samuel Painter, Praveen Surenani-->
+    <!--*/-->
+
+<resources>
+    <color name="safe">#32B835</color>
+    <color name="careful">#FF8000</color>
+    <color name="danger">#A60404</color>
+</resources>
